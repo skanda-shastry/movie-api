@@ -1,19 +1,21 @@
 from flask import Blueprint, request, jsonify
-from app.services.movie_service import (
+from app.services import (
     get_movies_by_year,
     get_movies_by_title,
     get_movies_by_cast,
     get_movies_by_genre,
 )
 
-movie_bp = Blueprint('movie', __name__)
 
+movie_bp = Blueprint('movies', __name__)
 @movie_bp.route('/movies', methods=['GET'])
 def get_movies():
+
     year = request.args.get('year')
     title = request.args.get('title')
     cast = request.args.get('cast')
     genre = request.args.get('genre')
+
 
     if year:
         movies = get_movies_by_year(year)

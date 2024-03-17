@@ -1,8 +1,9 @@
-from app.utils.mongo_utils import get_db
+from app.utils import get_db
 
 def get_movies_by_year(year):
     db = get_db()
     movies = list(db.movies.find({"year": year}))
+
     return movies
 
 def get_movies_by_title(title):
