@@ -1,4 +1,4 @@
-from datetime import datetime
+
 
 class Movie:
     def __init__(self, title, year, cast, genre):
@@ -6,4 +6,3 @@ class Movie:
         self.year = year
         self.cast = cast
         self.genre = genre
-        self.created_at = datetime.now()

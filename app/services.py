@@ -1,4 +1,3 @@
-from app.models.movie_model import Movie
 from app.utils.mongo_utils import get_db
 
 def get_movies_by_year(year):
