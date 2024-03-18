@@ -1,15 +1,17 @@
 kind: HorizontalPodAutoscaler
 metadata:
-  name: my-hpa
+  name: movie-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: my-deployment
+    name: movie-api
   minReplicas: 1
   maxReplicas: 10
   metrics:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: 50
+      target:
+        type: Utilization
+        averageUtilization: 50

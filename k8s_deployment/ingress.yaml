@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: movies-ingress
+spec:
+  rules:
+    - host: movies.com
+      http:
+        paths:
+          - path: /movies
+            pathType: Prefix
+            backend:
+              service:
+                name: movie-api
+                port:
+                  number: 80

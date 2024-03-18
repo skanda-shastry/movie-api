@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: movie-api
 spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-        targetPort: 5000
   selector:
     app: movie-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
