@@ -1,22 +1,14 @@
 # movie-api
-GET API implementation for the movie data
-
-```
-    /movies?year=<year>
-    /movies?title=<movie name>
-    /movies?cast=<cast member>
-    /movies?genre=<genre>
-```
-
+GET API implementation for the movie [data](https://github.com/prust/wikipedia-movie-data/blob/master/movies-2020s.json)
 
 This API provides endpoints to retrieve movie data based on various parameters.
 
 Endpoints:
 
-    /movies?year=<year>         # Get movies released in a specific year.
-    /movies?title=<movie_name>  # Get a movie by its title.
-    /movies?cast=<cast_member>  # Get movies featuring a specific cast member.
-    /movies?genre=<genre>       # Get movies of a particular genre.
+    http://127.0.0.1:5000/movies?year=<year>         # Get movies released in a specific year.
+    http://127.0.0.1:5000/movies?title=<movie_name>  # Get a movie by its title.
+    http://127.0.0.1:5000/movies?cast=<cast_member>  # Get movies featuring a specific cast member.
+    http://127.0.0.1:5000/movies?genre=<genre>       # Get movies of a particular genre.
 
 To use this API, send a GET request to the desired endpoint with the corresponding parameter:
 ```
