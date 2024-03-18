@@ -8,14 +8,18 @@ from app.services import (
 
 
 movie_bp = Blueprint('movies', __name__)
+# API for getting movies from mangoDB
 @movie_bp.route('/movies', methods=['GET'])
 def get_movies():
+
+    # Source of the API requests
+    user_agent = request.headers.get('User-Agent')
+    print("User-Agent:", user_agent)
 
     year = request.args.get('year')
     title = request.args.get('title')
     cast = request.args.get('cast')
     genre = request.args.get('genre')
-
 
     if year:
         movies = get_movies_by_year(year)
