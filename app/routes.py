@@ -30,6 +30,6 @@ def get_movies():
     elif genre:
         movies = get_movies_by_genre(genre)
     else:
-        return jsonify({'error': 'Invalid query parameter'}), 400
+        return jsonify({'error': 'Invalid parameter'}), 400
 
     return jsonify({'movies': movies}), 200
