@@ -12,7 +12,7 @@ movie_bp = Blueprint('movies', __name__)
 @movie_bp.route('/movies', methods=['GET'])
 def get_movies():
 
-    # Source of the API requests
+    # Source/Type of the API requests
     user_agent = request.headers.get('User-Agent')
     print("User-Agent:", user_agent)
 
