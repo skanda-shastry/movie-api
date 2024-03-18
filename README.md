@@ -5,17 +5,17 @@ This API provides endpoints to retrieve movie data based on various parameters.
 
 Endpoints:
 
-    http://127.0.0.1:5000/movies?year=<year>         # Get movies released in a specific year.
-    http://127.0.0.1:5000/movies?title=<movie_name>  # Get a movie by its title.
-    http://127.0.0.1:5000/movies?cast=<cast_member>  # Get movies featuring a specific cast member.
-    http://127.0.0.1:5000/movies?genre=<genre>       # Get movies of a particular genre.
+    movies?year=<year>         # Get movies released in a specific year.
+    movies?title=<movie_name>  # Get a movie by its title.
+    movies?cast=<cast_member>  # Get movies featuring a specific cast member.
+    movies?genre=<genre>       # Get movies of a particular genre.
 
 To use this API, send a GET request to the desired endpoint with the corresponding parameter:
 ```
-    Example: /movies?year=2020
-    Example: /movies?title=Inception
-    Example: /movies?cast=Leonardo DiCaprio
-    Example: /movies?genre=Action
+    Example: http://127.0.0.1:5000/movies?year=2020
+    Example: http://127.0.0.1:5000/movies?title=Inception
+    Example: http://127.0.0.1:5000/movies?cast=Leonardo DiCaprio
+    Example: http://127.0.0.1:5000/movies?genre=Action
 ```
 
 The API returns movie data in JSON format. Each movie object includes attributes like title, year, cast, and genre.
