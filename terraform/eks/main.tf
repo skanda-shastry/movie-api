@@ -52,8 +52,8 @@ resource "aws_iam_role_policy_attachment" "eks_service_policy" {
   role       = aws_iam_role.eks_cluster_role.name
 }
 
-
-resource "aws_eks_node_group" "my_node_group" {
+# EKS nodes configuration
+resource "aws_eks_node_group" "eks_node_group" {
   cluster_name    = aws_eks_cluster.movies.name
   node_group_name = "movies-db-node-group"
   node_role_arn   = node_group_name_role
