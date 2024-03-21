@@ -1,11 +1,5 @@
-output "cluster_endpoint" {
-  description = "Endpoint for EKS control plane"
-  value       = module.eks_cluster.cluster_endpoint
-}
-
-output "cluster_name" {
-  description = "Kubernetes Cluster Name"
-  value       = module.eks_cluster.cluster_name
+output "eks_cluster_name" {
+  value = aws_eks_cluster.movies.name
 }
 
 output "vpc_id" {
